@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .kutu{
+            background-color: gold;
+            border-radius: 10px;
+            width:200px;
+            height: 200px;
+            margin-top:10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="slidedown">Slide Down</button>
+    <button id="slideup">Slide Up</button>
+    <button id="slidetoggle">Slide Toggle</button>
+    <div class="kutu"></div>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+            $(document).ready(function(){
+                $("#slidedown").click(function(){
+                    $(".kutu").slideDown();
+                })
+                $("#slidedown").click(function(){
+                    $(".kutu").slideUp();
+                })
+                $("#slidetoggle").click(function(){
+                    $(".kutu").slideUp();
+                })
+            })
+    </script>
+</body>
+</html>

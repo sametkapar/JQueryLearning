@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Bana Buton diyemezsin.</p>
+    <p>Bana Buton diyemezsin.</p>
+    <label>Double click hide</label><br><br>
+    <span id="span1">Ben bir span'im</span>
+
+    <div>
+        İsim = <br><input type="text" name="isim"><br<br>
+        <br> Soyİsim =<br> <input type="text" name="soyisim"><br<br>
+    </div>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script> 
+        $(document).ready(function(){
+            $("p").click(function(){
+                $(this).hide();
+            });
+
+            $("label").dblclick(function(){
+                $(this).hide();
+            })
+            /*$('#span1').mouseenter(function(){
+                alert("Mouse Enter oldu")
+            })*/
+            /*$('#span1').mouseleave(function(){
+                alert("Mouse leave")
+            })*/
+            /*$('#span1').mousedown(function(){
+                alert("Mouse'a basıldığında ")
+            })*/
+            /*$('#span1').mouseup(function(){
+                alert("Mouse tıklama kaldırıldı ")
+            })*/
+            /*$("#span1").hover(function(){
+                $(this).css("background-color","orangered");
+            },function(){
+                $(this).css("background-color","white");
+            });*/
+
+            /*$("input").focus(function(){
+                $(this).css("background-color", "#efefef");
+            })
+            $("input").blur(function(){
+                $(this).css("background-color","white")
+            })*/
+           $("#span1").on({
+            mouseenter:function(){
+                $(this).css("background-color","pink")
+            },
+            mouseleave:function(){
+                $(this).css("background-color","orangered")
+            },
+            click:function(){
+                $(this).css("background-color","purple")
+            }
+           });
+        });
+    </script>
+</body>
+</html>
