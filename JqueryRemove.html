@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Remove İşlemleri</title>
+    <style>
+        #d_metin{
+            padding:20px;
+            background-color: brown;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div id="d_metin">
+        <p id="p1">Deneme Paragraf 1</p>
+        <p id="p2">Deneme Paragraf 2</p>
+    </div>
+   
+    <button id="btn_sil">Sil</button>
+    <button id="btn_temizle">Temizle</button>
+    <button id="btn_p2sil">Paragraf 2 sil</button>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn_sil").click(function(){
+                $("#d_metin").remove();
+            });
+            $("#btn_temizle").click(function(){
+                $("#d_metin").empty();
+            });
+            $("#btn_p2sil").click(function(){
+                $("p").remove("#p2");
+            });
+        });
+    </script>
+</body>
+</html>
